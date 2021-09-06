@@ -3,6 +3,7 @@ const { Telegraf } = require('telegraf')
 const Koa = require('koa')
 const app = new Koa()
 
+let port = process.env.PORT || 80
 
 // const token = "1987804684:AAHuHy1WUfOgJJkGGmHx5e01EZvPwzGasMI"
 // if (token === undefined) {
@@ -52,7 +53,7 @@ bot.on('text', (ctx) => ctx.replyWithHTML(bot1.mensaje))
 bot.launch({
 webhook: {
     domain: 'https://botdebots.herokuapp.com/' + bot1.id,
-    port: 80
+    port: port
 }
 })
 
@@ -63,7 +64,7 @@ boti.on('text', (ctx) => ctx.replyWithHTML(bot2.mensaje))
 boti.launch({
 webhook: {
     domain: 'https://botdebots.herokuapp.com/' + bot2.id,
-    port: 80
+    port: port
 }
 })
 
