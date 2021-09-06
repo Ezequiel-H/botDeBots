@@ -37,7 +37,7 @@ function comedor(unBot) {
 
     bot.launch({
     webhook: {
-        domain: 'https://pink-dog-84.loca.lt/' + unBot.id,
+        domain: 'https://botdebots.herokuapp.com/' + unBot.id,
         port: 3000
     }
     })
