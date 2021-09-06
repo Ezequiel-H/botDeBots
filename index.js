@@ -10,9 +10,9 @@ const app = new Koa()
 // }
 
 
-const boti = {token: "1987804684:AAHuHy1WUfOgJJkGGmHx5e01EZvPwzGasMI", mensaje: "hola0", id: 1}
+const bot1 = {token: "1987804684:AAHuHy1WUfOgJJkGGmHx5e01EZvPwzGasMI", mensaje: "hola0", id: 1}
 
-const bott = {token: "1979561848:AAH4rJinuNdrHQGbBRI2VFKCU9xpAK3QGT4", mensaje: "hola1", id: 2}
+const bot2 = {token: "1979561848:AAH4rJinuNdrHQGbBRI2VFKCU9xpAK3QGT4", mensaje: "hola1", id: 2}
 
 
 const arrayBots = [{token: "1987804684:AAHuHy1WUfOgJJkGGmHx5e01EZvPwzGasMI", mensaje: "hola0", id: 1}, {token: "1979561848:AAH4rJinuNdrHQGbBRI2VFKCU9xpAK3QGT4", mensaje: "hola1", id: 2}]
@@ -45,24 +45,24 @@ const arrayBots = [{token: "1987804684:AAHuHy1WUfOgJJkGGmHx5e01EZvPwzGasMI", men
 
 
 
-const bot = new Telegraf(boti.token)
+const bot = new Telegraf(bot1.token)
 
-bot.on('text', (ctx) => ctx.replyWithHTML(boti.mensaje))
+bot.on('text', (ctx) => ctx.replyWithHTML(bot1.mensaje))
 
 bot.launch({
 webhook: {
-    domain: 'https://botdebots.herokuapp.com/' + boti.id,
+    domain: 'https://botdebots.herokuapp.com/' + bot1.id,
     port: 80
 }
 })
 
-const boti = new Telegraf(bott.token)
+const boti = new Telegraf(bot2.token)
 
-boti.on('text', (ctx) => ctx.replyWithHTML(bott.mensaje))
+boti.on('text', (ctx) => ctx.replyWithHTML(bot2.mensaje))
 
 boti.launch({
 webhook: {
-    domain: 'https://botdebots.herokuapp.com/' + bott.id,
+    domain: 'https://botdebots.herokuapp.com/' + bot2.id,
     port: 80
 }
 })
