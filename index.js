@@ -53,20 +53,20 @@ bot.on('text', (ctx) => ctx.replyWithHTML(bot1.mensaje))
 bot.launch({
 webhook: {
     domain: 'https://botdebots.herokuapp.com/' + bot1.id,
-    port: port
+    port
 }
 })
 
-const boti = new Telegraf(bot2.token)
+// const boti = new Telegraf(bot2.token)
 
-boti.on('text', (ctx) => ctx.replyWithHTML(bot2.mensaje))
+// boti.on('text', (ctx) => ctx.replyWithHTML(bot2.mensaje))
 
-boti.launch({
-webhook: {
-    domain: 'https://botdebots.herokuapp.com/' + bot2.id,
-    port: port
-}
-})
+// boti.launch({
+// webhook: {
+//     domain: 'https://botdebots.herokuapp.com/' + bot2.id,
+//     port
+// }
+// })
 
 
 
