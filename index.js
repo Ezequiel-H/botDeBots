@@ -45,24 +45,24 @@ const arrayBots = [{token: "1987804684:AAHuHy1WUfOgJJkGGmHx5e01EZvPwzGasMI", men
 
 
 
-const bot = new Telegraf(unBot.token)
+const bot = new Telegraf(boti.token)
 
-bot.on('text', (ctx) => ctx.replyWithHTML(unBot.mensaje))
+bot.on('text', (ctx) => ctx.replyWithHTML(boti.mensaje))
 
 bot.launch({
 webhook: {
-    domain: 'https://botdebots.herokuapp.com/' + unBot.id,
+    domain: 'https://botdebots.herokuapp.com/' + boti.id,
     port: 80
 }
 })
 
-const boti = new Telegraf(unBot.token)
+const boti = new Telegraf(bott.token)
 
-boti.on('text', (ctx) => ctx.replyWithHTML(unBot.mensaje))
+boti.on('text', (ctx) => ctx.replyWithHTML(bott.mensaje))
 
 boti.launch({
 webhook: {
-    domain: 'https://botdebots.herokuapp.com/' + unBot.id,
+    domain: 'https://botdebots.herokuapp.com/' + bott.id,
     port: 80
 }
 })
