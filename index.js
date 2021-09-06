@@ -30,21 +30,42 @@ const arrayBots = [{token: "1987804684:AAHuHy1WUfOgJJkGGmHx5e01EZvPwzGasMI", men
 // })
 
 
-function comedor(unBot) {
-    const bot = new Telegraf(unBot.token)
+// function comedor(unBot) {
+//     const bot = new Telegraf(unBot.token)
 
-    bot.on('text', (ctx) => ctx.replyWithHTML(unBot.mensaje))
+//     bot.on('text', (ctx) => ctx.replyWithHTML(unBot.mensaje))
 
-    bot.launch({
-    webhook: {
-        domain: 'https://botdebots.herokuapp.com/' + unBot.id,
-        port: 3000 + unBot.id
-    }
-    })
+//     bot.launch({
+//     webhook: {
+//         domain: 'https://botdebots.herokuapp.com/' + unBot.id,
+//         port: 3000 + unBot.id
+//     }
+//     })
+// }
+
+
+
+const bot = new Telegraf(unBot.token)
+
+bot.on('text', (ctx) => ctx.replyWithHTML(unBot.mensaje))
+
+bot.launch({
+webhook: {
+    domain: 'https://botdebots.herokuapp.com/' + unBot.id,
+    port: 80
 }
+})
 
-comedor(boti)
-comedor(bott)
+const boti = new Telegraf(unBot.token)
+
+boti.on('text', (ctx) => ctx.replyWithHTML(unBot.mensaje))
+
+boti.launch({
+webhook: {
+    domain: 'https://botdebots.herokuapp.com/' + unBot.id,
+    port: 80
+}
+})
 
 
 
